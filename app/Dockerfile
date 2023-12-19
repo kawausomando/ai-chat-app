@@ -8,8 +8,8 @@ RUN bun install --production
 
 FROM oven/bun:distroless AS runtime
 
-COPY --from=build --chown=nonroot:nonroot /app/node_modules /app/node_modules
 COPY src /app/src
+COPY --from=build --chown=nonroot:nonroot /app/node_modules /app/node_modules
 
 USER nonroot
 EXPOSE 3000
