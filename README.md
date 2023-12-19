@@ -22,11 +22,13 @@ chmod -x image_push.sh
 ./image_push.sh
 ```
 
-##　AppRunner
+
+## App Runnerの設定
 
 1. リポジトリタイプをコンテナレジストリに設定
 2. プロバイダーをAmazon ECRに設定
 3. 以下をターミナルなどで実行して出力されるURIをコンテナイメージのURIに設定する
+
 ```
 $ ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 $ REGION=$(aws configure get region)
